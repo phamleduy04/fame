@@ -38,7 +38,7 @@ RUN apt-get update && apt-get install -y \
     mongodb-org
 
 
-RUN pip install virtualenv && \
+RUN python -m pip install virtualenv && \
     git clone https://github.com/certsocietegenerale/fame
 
 ENTRYPOINT ["/opt/fame/docker/launch.sh"]
