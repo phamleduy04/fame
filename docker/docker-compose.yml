@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  fame:
+    image: ghcr.io/phamleduy04/fame:latest
+    container_name: fame
+    ports:
+      - "4200:4200"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./temp:/opt/fame/temp 
